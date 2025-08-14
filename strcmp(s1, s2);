@@ -1,0 +1,47 @@
+/*
+The C Library strcmp() function is used to compare two strings. It checks each character in the string one by one until it finds a difference or reaches the end of the one string. Additionally, the strings comparison is based on ASCII values.
+*/
+
+#include <iostream>
+#include <cstring>
+
+using namespace std;
+
+int main () {
+
+   char str1[10] = "Hello";
+   char str2[10] = "World";
+   char str3[10];
+   
+   cout<<strcmp(str2, strcpy(str3, str2));
+
+   return 0;
+}
+
+output
+``````
+0
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#include <iostream>
+#include <cstring>
+
+using namespace std;
+
+int main () {
+
+   char str1[10] = "Hello";
+   char str2[10] = "World";
+   char str3[10];
+   
+   cout<<strcmp(str1, str2);
+   return 0;
+}
+
+output
+```````
+-15
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
