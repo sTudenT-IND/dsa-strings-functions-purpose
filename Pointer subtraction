@@ -1,0 +1,13 @@
+//The difference between the two pointers tells us how far p is from the start of str in terms of characters.
+//                                                             p - str  →  (address(p) - address(str)) / sizeof(char)
+//In C/C++, subtracting two pointers that point into the same array (here, the same character array str) gives the number of elements between them.  sizeof(char) is 1 byte
+//                                                             p - str  →  1016 - 1000 = 16
+//program prints 16 — the starting index (0-based) of "live" in the string.
+//                                                             (p - str + 1)
+//human readable indexing is 1 based indexing
+/*
+Mathematics in short:
+
+          Pointer difference → (address difference) / sizeof(element type)
+          Since here sizeof(char) = 1, pointer difference = character index.
+*/
