@@ -1,0 +1,86 @@
+//character search in a given string
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+int main() 
+{
+    const char str[] = "Tutorialspoint";
+    // "ch" is search string
+    const char ch = '.';
+    char *ret;
+
+    ret = strchr(str, ch);
+    cout << "String after |" << ch << "| is - |" 
+         << (ret ? ret : "(null)") << "|" << endl;
+    return 0;
+}
+
+Output
+``````
+String after |.| is - |(null)|
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//a specific character to determine the extraction of a substring from a given string.
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+int main() 
+{
+    const char *str = "Welcome to Tutorialspoint";
+    char ch = 'u';
+    // Find the first occurrence of 'u' in the string
+    char *p = strchr(str, ch);
+
+    if (p != NULL) 
+    {
+        cout << "String starting from '" << ch << "' is: " << p << endl;
+    } 
+    else 
+    {
+        cout << "Character '" << ch << "' not found in the string." << endl;
+    }
+    return 0;
+}
+
+output
+``````````````
+String starting from 'u' is: utorialspoint
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//find the position of a character from a given string
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+int main() 
+{
+    char str[] = "This is simple string";
+    char* sh;
+
+    cout << "Searching for the character 's' in the given string i.e. \"" 
+         << str << "\"" << endl;
+
+    sh = strchr(str, 's');
+
+    while (sh != NULL) 
+    {
+        cout << "Found at position- " << (sh - str + 1) << endl;
+        sh = strchr(sh + 1, 's');
+    }
+    return 0;
+}
+
+
+output
+```````
+Searching for the character 's' in the given string i.e. "This is simple string"
+Found at position- 4
+Found at position- 7
+Found at position- 9
+Found at position- 16
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
