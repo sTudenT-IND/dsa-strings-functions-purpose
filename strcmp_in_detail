@@ -1,0 +1,94 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+
+   char str1[] = "abcd", str2[] = "abcd";
+   int res;
+
+   // Compare the strings str1 and str2
+   res = strcmp(str1, str2);
+   printf("strcmp(str1, str2) = %d\n", res);
+   return 0;
+}
+
+output
+```````
+strcmp(str1, str3) = 0
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~``
+#include <stdio.h>
+#include <string.h>
+
+int main() 
+{
+   char str1[] = "Tutorials";
+   char str2[] = "tutorials";
+   // Compare the strings
+   int result = strcmp(str1, str2);
+   
+   if (result == 0) {
+       printf("Strings are equal(case-sensitive)\n");
+   } 
+   else {
+        printf("Strings are not equal(case-insensitive).\n");   
+   }
+return 0;
+}
+
+output
+````````
+Strings are not equal(case-insensitive).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#include <stdio.h>
+#include <string.h>
+
+int main() 
+{
+   char str_1[] = "BOOK";
+   char str_2[] = "UNIVERSITY";
+
+   int res = strcmp(str_1, str_2);
+
+   if (res == 0) {
+       printf("The strings are equal.\n");
+   } 
+   else if (res < 0) {
+       printf("Str_1 is less than str_2.\n");
+   } 
+   else {
+       printf("Str_1 is greater than str_2.\n");
+   }
+   return 0;
+}
+
+output
+```````
+Str_1 is less than str_2.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+int main { 
+
+   char str1[] = "text";
+   char str2[] = "notebook";
+
+   int result = strcmp(str1, str2);
+   if (result < 0) {
+       printf("'%s' comes before '%s' lexicographically.\n", str1, str2);
+   } 
+   else if (result > 0) {
+       printf("'%s' comes after '%s' lexicographically.\n", str1, str2);
+   } 
+   else {
+      printf("Strings are equal.\n");
+   }
+    return 0;
+}
+
+output
+```````
+'text' comes after 'notebook' lexicographically.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
