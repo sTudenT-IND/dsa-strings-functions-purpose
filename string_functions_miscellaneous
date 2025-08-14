@@ -1,0 +1,31 @@
+Function	  |  Description
+````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````
+length()	  |  This function returns the length of the string.                                                                                                     cout<<x.length()<<endl;
+swap()      |	This function is used to swap the values of 2 strings.                                                                                               
+size()      |	Used to find the size of string
+resize()	  |  This function is used to resize the length of the string up to the given number of characters.
+find()	    |  Used to find the string which is passed in parameters
+push_back()	|  This function is used to push the character at the end of the string
+pop_back()	|  This function is used to pop the last character from the string
+clear()	    |  This function is used to remove all the elements of the string.
+find()	    |  This function is used to search for a certain substring inside a string and returns the position of the first character of the substring.
+replace()	  |  This function is used to replace each element in the range [first, last) that is equal to old value with new value.
+substr()	  |  This function is used to create a substring from a given string.
+compare()   |	This function is used to compare two strings and returns the result in the form of an integer.
+erase()	    |  This function is used to remove a certain part of a string.
+append()    | this could be used in place of x + y for concatenation.                                                                                               x.append(y);
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ string x="hey boy";
+   string y=" now";
+
+Output
+```````
+hey boy now
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//String Input in C++
+cin                   cin>>string_name;
+getline()             getline(cin, string_name);                           read a string from an input stream. defined in <string>
+stringstream          Stringstream object_name(string_name);               take multiple strings as input, all at once.
+
+
