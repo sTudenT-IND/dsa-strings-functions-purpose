@@ -1,0 +1,124 @@
+//performing same operations using very basic code
+
+//creating a string
+#include <iostream>
+using namespace std;
+
+int main() { 
+   char s[5]={'h','e','l','l','o'};
+   cout<<s<<endl;
+   return 0; 
+}
+
+Output
+````````
+hello
+
+
+
+syntax:   char variable_name[len_value] ;
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//declare a String variable using the 'string' keyword.
+
+//syntax:    string variable_name = [value];
+#include <iostream>
+using namespace std;
+
+int main() { 
+   string s="a merry tale";
+   cout<<s;    
+   return 0; 
+}
+
+output
+``````
+a merry tale
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//Creating String using Character Array
+#include <iostream>
+using namespace std;
+
+int main() { 
+   char s[5]={'h','e','l','l','o'};
+   cout<<s<<endl;
+   return 0; 
+}
+output
+``````
+hello
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+//Traversing a String (Iterate Over a String)
+#include <iostream>
+using namespace std;
+
+int main() {
+   string s="Hey, I am at TP.";
+
+   for(int i=0;i<s.length();i++){      //Using looping statements
+      cout<<s[i]<<" ";
+   }
+   cout<<endl;
+
+   for(char c:s){           //using iterators
+      cout<<c<<" ";
+   }
+
+   return 0;
+}
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//Accessing Characters of String
+
+#include <iostream>
+using namespace std;
+
+int main() {
+   string s="Hey, I am at TP.";
+   cout<<s<<endl;
+   for(int i=0;i<s.length();i++){    //iterators
+     s[i]='A';
+   }
+   cout<<s<<endl;
+
+   for(char &c:s){                 //pointers
+      c='B';
+   }
+   cout<<s<<endl;
+
+   return 0;
+}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//strcpy() and strcat()  shown below using basic operations without these two functions actually being used
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main () {
+
+   string str1 = "Hello";
+   string str2 = "World";
+   string str3;
+   int  len ;
+
+   // copy str1 into str3
+   str3 = str1;
+   cout << "str3 : " << str3 << endl;
+
+   // concatenates str1 and str2
+   str3 = str1 + str2;
+ cout << "str1 + str2 : " << str3 << endl;
+
+   // total length of str3 after concatenation
+   len = str3.size();
+   cout << "str3.size() :  " << len << endl;
+
+   return 0;
+}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
