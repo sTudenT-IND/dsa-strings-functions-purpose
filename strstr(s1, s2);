@@ -1,0 +1,102 @@
+/*
+The C++ library strstr() function returns a pointer to the first index of a specified substring in another string. The main goal of strstr() is to search for a substring within a larger string, and it helps to find the first occurrence of a specified substring.
+
+Syntax
+Following is the syntax of the C++ library strstr() function −
+                                     char *strstr (const char *str_1, const char *str_2);
+Parameters
+This function takes two parameters −
+
+str_1 − This is a main string.
+
+str_2 − The substring to be searched in main string i.e. str_1.
+
+Return Value
+The function returns the value based on the following conditions −
+
+The function returns a pointer to the first characters of str_2 in str_1 or null pointer if str_2 is not found in str_1.
+
+If str_2 is found as an empty string, str_1 is returned.
+*/
+
+//demonstrates the substring presence within a main string using the function strstr().
+                  ```````````````````
+
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+int main() {
+    const char str[20] = "TutorialsPoint";
+    const char substr[10] = "Point";
+    char *ret;
+   
+    // strstr(main_string, substring)
+    ret = strstr(str, substr);
+   
+    // Display the output
+    cout << "The substring is: " << ret << endl;
+   
+    return 0;
+}
+
+
+output
+``````
+The substring is: Point
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//how to search the substring within a main string using the strstr() function.
+         ```````````````````
+
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+int main() {
+    char str_1[100] = "Welcome to Tutorialspoint";
+    char *str_2;
+    str_2 = strstr(str_1, "ials");
+    cout << "\nSubstring is: " << str_2;
+    return 0;
+}
+
+
+output
+```````
+Substring is: ialspoint
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//check whether the substring is present
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+int main() {
+    char str[] = "It is better to live one day as a King";
+    char target[] = "live";
+    char *p = strstr(str, target);
+
+    if (p)
+        cout << "'" << target << "' is present in the given string \"" 
+             << str << "\" at position " << (p - str);
+    else
+        cout << target << " is not present \"" << str << "\"";
+
+    return 0;
+}
+
+
+output
+```````
+'live' is present in the given string "It is better to live one day as a King" at position 16
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+rewrite these using std::string::find() so that it’s more idiomatic for modern C++
+
+
+
+
+
+
+
