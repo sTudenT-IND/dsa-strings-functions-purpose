@@ -1,0 +1,55 @@
+A. C-style String (char[])
+
+Write a program to declare a character array and print it using cout.
+
+Input a string from the user (using cin.getline) and print its length using strlen().
+
+Find the first occurrence of a character in a given string using strchr().
+
+Find all positions of a character in a given string using strchr() inside a loop.
+
+Find the first occurrence of a substring inside a string using strstr().
+
+Modify a given string so that all vowels are replaced by *.
+
+Reverse a string in place (without using extra memory).
+
+Compare two strings using strcmp() and display if they are equal or not.
+
+Concatenate two strings using strcat().
+
+Count the number of words in a given string (assume words are separated by spaces).
+
+B. C++ std::string
+
+Create a string using std::string and print its length using .length() or .size().
+
+Take input of a string with spaces (use getline(cin, str)), then print it.
+
+Extract a substring from a string using .substr(pos, len).
+
+Find if a given substring exists in a string using .find().
+
+Replace a part of a string with another substring using .replace().
+
+Convert all characters of a string to uppercase (hint: use toupper()).
+
+Count how many times a particular character occurs in a string.
+
+Concatenate two strings using + operator.
+
+Compare two strings using == operator.
+
+Reverse a std::string using reverse() from <algorithm>.
+
+C. Mixed Conceptual
+
+Difference between char str[] = "Hello"; and string s = "Hello";.
+
+Explain what happens if you forget the null terminator '\0' in a C-string.
+
+How does strchr(str, 'a') return the position of a character mathematically?
+
+What is the difference between strlen(str) and sizeof(str) for char str[] = "Hello";?
+
+When should you use std::string over char[]?
