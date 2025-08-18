@@ -1,0 +1,30 @@
+//You are given a string s. Your task is to determine if the string is a palindrome. A string is considered a palindrome if it reads the same forwards and backwards.
+
+//Examples :
+
+//Input: s = "abba"
+//Output: true
+//Explanation: "abba" reads the same forwards and backwards, so it is a palindrome.
+
+class Solution {
+  public:
+    bool isPalindrome(string& s) {
+        // code here
+        //string ko reverese kr k store in another string s2 
+        // copy initial string in s1 //now compare s1 and s2 
+        // return s1 == s2; this will give itself true or false
+        
+        
+        //initializing string using constructor
+        string s1(s);
+        
+        //copying 
+        string s2 = s1;
+        
+        //reverse the string s2 directly, don't copy it in s3
+        reverse(s2.begin(), s2.end());
+        
+        //compare both the strings and return the ans in true and false
+        return (s2==s1);
+    }
+};
