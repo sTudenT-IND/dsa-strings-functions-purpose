@@ -6,6 +6,8 @@
 //Output: true
 //Explanation: "abba" reads the same forwards and backwards, so it is a palindrome.
 
+
+//BRUTE FORCE APPROACH
 class Solution {
   public:
     bool isPalindrome(string& s) {
@@ -28,3 +30,80 @@ class Solution {
         return (s2==s1);
     }
 };
+
+
+//another way of writing the same code 
+int isPalindrome(string & s){
+  
+    // If reverse string is equal to given string,
+    // then it is palindrome.
+    return s == string(s.rbegin(), s.rend()) ? 1 : 0;
+}
+
+`````````````````````````````````````````````````````````````````````````````````````````````````````````````
+
+//BETTER CODE
+//2-pointer approach
+//my first error code
+class Solution {
+  public:
+    bool isPalindrome(string& s) {
+       //two pointers approach
+       int left = *(s.begin());
+       int right = *(s.end());
+       while(left < right){
+           if(s[right]!=s[left]) break;
+           left++;
+           right--;
+       }
+    }
+};
+
+Runtime Error 
+Segmentation Fault (SIGSEGV)
+timeout: the monitored command dumped core
+/bin/bash: line 1:    29 Segmentation fault      
+
+//solution
+s.begin() points to the first character, dereferencing gives its ASCII value (not the index).
+s.end() points one past the last character, so dereferencing *(s.end()) is undefined (causes segmentation fault).
+You should use indices (0 and s.size() - 1) instead of iterators here.
+
+
+
+
+//correct code
+class Solution {
+  public:
+    bool isPalindrome(string& s) {
+       //two pointers approach
+       int left = 0;
+       int right = s.size()-1;
+       while(left < right){
+           if(s[right]!=s[left]) return false;
+           
+           left++;
+           right--;
+       }
+       return true;
+    }
+};
+
+
+
+//OPTIMIZED SOLUTION
+class Solution {
+  public:
+    bool isPalindrome(string& s) {
+       //two pointers approach
+       int len = s.size()-1;
+       int i =0;
+       while(i < len){
+           if(s[i] != s[len-i]) return false;
+           i++;
+       }
+       return true;
+    }
+};
+
+
