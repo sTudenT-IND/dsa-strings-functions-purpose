@@ -1,0 +1,73 @@
+//reverse a string using backward traversal            TC=o(N), SC=O(N)
+string reverseString(string& s) {
+    string res;
+  
+  	// Traverse on s in backward direction
+  	// and add each charecter to a new string
+    for (int i = s.size() - 1; i >= 0; i--) {
+        res += s[i];
+    }
+    return res;
+}
+
+```````````````````````````````````````````````````````````````````
+//reverse a string using two pointers                   TC=O(N), SC = O(1)
+string reverseString(string &s) {
+    int left = 0, right = s.length() - 1;
+
+    // Swap characters from both ends till we reach
+    // the middle of the string
+    while (left < right) {
+        swap(s[left], s[right]);
+        left++;
+        right--;
+    }
+  
+    return s;
+}
+````````````````````````````````````````````````````````````````````
+
+//reverse an array using Recursion                        TC=O(N), SC=O(N)
+void reverseStringRec(string &s, int l, int r) {
+  
+    // If the substring is empty, return
+    if(l >= r)
+        return;
+  
+    swap(s[l], s[r]);
+  	
+    // Recur for the remaining string
+    reverseStringRec(s, l + 1, r - 1);
+}
+
+// function to reverse a string
+string reverseString(string &s) {
+    int n = s.length();
+    reverseStringRec(s, 0, n - 1);
+  	return s;
+}
+```````````````````````````````````````````````````````````````````````
+
+//reverse a string using stack                TC=O(N), SC=O(N)
+string reverseString(string &s) {
+    stack<char> st;
+  
+    // Push the charcters into stack
+    for (int i = 0; i < s.size(); i++) {
+        st.push(s[i]);
+    }
+
+    // Pop the characters of stack into the original string
+    for (int i = 0; i < s.size(); i++) {
+        s[i] = st.top();
+        st.pop();
+    }
+  
+  	return s;
+}
+```````````````````````````````````````````````````````````````````````
+//use built-in reverse                          TC=O(N), SC=O(1)
+string reverseString(string &s) {
+    reverse(s.begin(), s.end());
+  	return s;
+}
